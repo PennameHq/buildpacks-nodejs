@@ -67,7 +67,7 @@ impl Install<'_> {
 impl<'a> From<Install<'a>> for Command {
     fn from(value: Install<'a>) -> Self {
         let mut cmd = Command::new("npm");
-        cmd.arg("ci");
+        cmd.arg("i");
         cmd.envs(value.env);
         cmd
     }
